@@ -1,1 +1,16 @@
-.container{width:986px;height:auto}.content{padding:10px}#sidebar ul{width:300px}#sidebar li{float:left}
+.container {
+	width: 986px;
+	height: auto
+}
+.content {
+	padding: 10px;
+}
+#sidebar ul {
+	width: 300px
+}
+#sidebar li {
+	float: left
+}
+.warning{
+	background-color: red;
+}

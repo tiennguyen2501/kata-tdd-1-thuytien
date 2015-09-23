@@ -2,7 +2,7 @@
   "name": "string-calculator-exersise",
   "version": "1.0.0",
   "description": "a TDD Kata- an exercise in coding is String Calculator",
-  "main": "index.html",
+  "main": "WebContent/index.html",
   "dependencies": {
     "grunt": "^0.4.5"
   },
