@@ -3,8 +3,86 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script  type="text/javascript" language="Javascript"  src="js/js-validate.js"></script>
 </head>
 <body>
+<div class="container">
+<h1>String Calculor</h1>
+  <div class="content">
+  
+     <table width="800px" border="0">
+  <tr>
+    <td colspan="2">1. Create a simple String calculator with a method&nbsp;<strong>int Add(string numbers)</strong></td>
+    </tr>
+  <tr>
+    <td>String Input:</td>
+    <td><input type="text" name="txt-input" id="txt-input1">
+      <input type="button" id="btn-add1" value="Add"></td>
+  </tr>
+  <tr>
+    <td align="right">Result:</td>
+    <td><span class="ans01"></span></td>
+  </tr>
+  <tr>
+    <td colspan="2">2. Allow the Add method to handle an unknown amount of numbers</td>
+    </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>Input number string. Example: 1,4,5</td>
+  </tr>
+  <tr>
+    <td width="85"><div align="right">String Input:</div></td>
+    <td width="397">
+      <label for="input-string"></label>
+      <input type="text" name="input-string" id="txt-input2">
+      <input type="button" name="btn-add" id="btn-add2" value="Add">
+    </td>
+  </tr>
+  <tr>
+    <td align="right">Result:</td>
+    <td><span class="ans02"></span></td>
+  </tr>
+  <tr>
+    <td colspan="2">3. Allow the Add method to handle new lines between numbers (instead of commas).</td>
+    </tr>
+  <tr>
+    <td align="right">String Input:</td>
+    <td><label for="txt-mul-input"></label>
+      <textarea name="txt-mul-input" id="txt-mul-input"></textarea><input type="button" name="btn-add" id="btn-add3" value="Add"></td>
+  </tr>
+  <tr>
+    <td align="right">Result:</td>
+    <td><span class="ans03"></span></td>
+  </tr>
+  <tr>
+    <td colspan="2">4. Support different delimiters</td>
+    </tr>
+  <tr>
+    <td align="right">String Input:</td>
+    <td><textarea name="txt-mul-input2" id="txt-mul-input2"></textarea>
+      <input type="button" name="btn-add4" id="btn-add4" value="Add"></td>
+  </tr>
+  <tr>
+    <td align="right">Result:</td>
+    <td><span class="ans04"></span></td>
+  </tr>
+  <tr>
+    <td colspan="2">5. Calling Add with a negative number will throw an exception “negatives not allowed” - and the negative that was passed.if there are multiple negatives, show all of them in the exception message</td>
+    </tr>
+  <tr>
+    <td align="right">String Input:</td>
+    <td><input type="text" name="txt-input3" id="txt-input3">
+      <input type="button" name="btn-add5" id="btn-add5" value="Add"></td>
+  </tr>
+  <tr>
+    <td align="right">Result:</td>
+    <td><span class="ans05"></span></td>
+  </tr>
+    </table>
 
+  </div>
+</div>
 </body>
 </html>

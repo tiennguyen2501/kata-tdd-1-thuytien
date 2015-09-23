@@ -1,14 +1,43 @@
 module.exports = function(grunt) {
 
-	grunt.initConfig({
-		  log: {
-		    foo: [1, 2, 3],
-		    bar: 'hello world',
-		    baz: false
-		  }
-		});
+  grunt.initConfig({
+    pkg: grunt.file.readJSON('package.json'),
+    concat: {
+      options: {
+        separator: ';'
+      },
+      dist: {
+        src: ['src/**/*.js'],
+        dest: 'dist/<%= pkg.name %>.js'
+      }
+    },
+    qunit: {
+      files: ['WebContent/*.html','WebContent/js/*.js']
+    },
+    jshint: {
+      files: ['Gruntfile.js', 'WebContent/js/*.js', 'test/**/*.js'],
+      options: {
+        // options here to override JSHint defaults
+        globals: {
+          jQuery: true,
+          console: true,
+          module: true,
+          document: true
+        }
+      }
+    },
+    watch: {
+      files: ['<%= jshint.files %>'],
+      tasks: ['jshint', 'qunit']
+    }
+  });
 
-		grunt.registerMultiTask('log', 'Log stuff.', function() {
-		  grunt.log.writeln(this.target + ': ' + this.data);
-		});
+  grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-contrib-qunit');
+  grunt.loadNpmTasks('grunt-contrib-watch');
+  
+  grunt.registerTask('test', ['jshint']);
+
+  grunt.registerTask('default', ['jshint', 'qunit']);
+
 };
